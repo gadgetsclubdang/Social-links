@@ -1,79 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gadgets Club Dang</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Connect with Gadgets Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    html, body {
       margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100%;
+      overflow: hidden;
+      color: white;
+      text-align: center;
     }
 
-    .container {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 350px;
+    body {
+      position: relative;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 20px;
     }
 
     h1 {
-      font-size: 24px;
-      color: #333;
-      margin-bottom: 30px;
+      font-size: 2.8em;
+      margin-bottom: 25px;
+      animation: fadeInDown 1s ease-out;
     }
 
-    .social-icons {
+    .links {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       gap: 20px;
-      flex-wrap: wrap;
+      width: 90%;
+      max-width: 400px;
+      animation: fadeInUp 1.2s ease-out;
     }
 
-    .social-icons a {
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       text-decoration: none;
-      font-size: 24px;
-      width: 55px;
-      height: 55px;
-      line-height: 55px;
-      text-align: center;
-      border-radius: 50%;
-      background: #f1f1f1;
-      color: #555;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px 20px;
+      border-radius: 12px;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2em;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
     }
 
-    .social-icons a:hover {
-      transform: scale(1.2);
-      color: #fff;
+    .links a i {
+      font-size: 1.5em;
+      transition: transform 0.3s ease;
     }
 
-    .social-icons a.facebook:hover { background: #1877F2; }
-    .social-icons a.tiktok:hover { background: #000; }
-    .social-icons a.whatsapp:hover { background: #25D366; }
-    .social-icons a.instagram:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%); color: white; }
+    .links a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    .links a:hover i {
+      transform: rotate(10deg) scale(1.2);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      animation: fadeIn 2s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Follow Gadgets Club Dang</h1>
-    <div class="social-icons">
-      <a href="https://facebook.com/gadgetsclubdang" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://tiktok.com/@gadgetsclubdang" class="tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://wa.me/9779812818558" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://instagram.com/gadgetsclubdang" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+
+  <div id="particles-js"></div>
+
+  <div class="content">
+    <h1>Connect with Gadgets Club</h1>
+
+    <div class="links">
+      <a href="https://facebook.com/gadgetsclubdang" target="_blank">
+        <i class="fab fa-facebook-f" style="color:#1877f2;"></i> Facebook
+      </a>
+      <a href="https://www.tiktok.com/@gadgetsclubdang" target="_blank">
+        <i class="fab fa-tiktok" style="color:#000;"></i> TikTok
+      </a>
+      <a href="https://wa.me/+9779812818558" target="_blank">
+        <i class="fab fa-whatsapp" style="color:#25D366;"></i> WhatsApp
+      </a>
+      <a href="https://instagram.com/gadgetsclubdang" target="_blank">
+        <i class="fab fa-instagram" style="color:#E4405F;"></i> Instagram
+      </a>
     </div>
+
+    <footer>
+      &copy; 2025 Gadgets Club
+    </footer>
   </div>
+
+  <!-- Particles.js script -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 60,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": true
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          }
+        },
+        "modes": {
+          "repulse": {
+            "distance": 100
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
